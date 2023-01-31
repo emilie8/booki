@@ -20,7 +20,6 @@ h4{
     line-height: 2em;  
 }
 
-
 .titre{
     margin: 0 8px 0 15px;
     display: flex;
@@ -188,7 +187,7 @@ h2 {
     padding: 2%;
 }
 
-#activites {
+#activites, .container-act {
     width: 100%;
     padding: 2% 0;
 }
@@ -399,36 +398,37 @@ i{
 }
 
 /* ------------------section activités-----------------*/
+.container-act{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: auto;
+    padding-top: 2%;
+}
 
 .vignette-act{
-   margin : 1rem;
-   flex: inherit;
+width: 23%;
 }
 
 .leg-act{
     min-height: 55px;
     display: flex;
     padding:5px;
-    border-radius: 0px 0px 17px 17px;box-shadow: 1px 1px 6px grey; 
+    border-radius: 0px 0px 17px 17px;
+    box-shadow: 1px 1px 6px grey; 
 }
 
 .leg-act p{
     display: flex;
     align-items: center;
 }
-.container-act{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex: auto;
-    padding-top:2% ;
-}
+
 .container-act .img{
     background-size: cover;
     background-position: center;
-    min-height: 376px;
-    min-width: 293px;
+    height: 376px;
     border-radius: 17px 17px 0px 0px;
 }
 
@@ -446,8 +446,6 @@ i{
 }
 
 
-
-
 /* ------------------footer------------------ */ 
 footer{
     background: var(--gris);
@@ -461,12 +459,10 @@ footer{
     display: flex; 
     flex-direction: column;
     width: 33.33%;
-    
 }
 
 .foot-nav > ul {
-    list-style: none;
-    
+    list-style: none;  
 }
 
 a {
@@ -482,7 +478,7 @@ a {
 
 @media screen and  (min-width:769px) and (max-width: 972px) {
     .container-first{
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .container-populaire{
@@ -490,10 +486,6 @@ a {
         flex-wrap: nowrap;
         width: 100%;
     }
-
-    /* #hebergement{
-        
-    } */
 
     .vignette-populaire{
         /* min-width: 250px; */
@@ -503,11 +495,13 @@ a {
         /* width: 97px; */
         /* flex: auto; */
         min-width: 97px;
-        
+    }
+    .container-act .img{
+        height: 204px;
     }
 
-   
-}   
+
+}  
     
 @media screen and (max-width: 768px) {
     .container-first{
@@ -517,11 +511,22 @@ a {
         min-width: 97px;
         
     }
+
+    .container-act .img{
+        height: 128px;
+    }
+
     .container-populaire{
         flex-direction: row;
         flex-wrap:wrap;
         width: 100%;
     }
+
+    .vignette-act{
+        width: 100%;
+        margin: 16px;
+    }
+
     footer{
         background: var(--gris);
         display: flex;
