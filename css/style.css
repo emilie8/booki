@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    /* déclaration de variables CSS */
+    --bleu: #0065FC;
+    --ciel: #DEEBFF;
+    --grisclair: #f1f1f1;
+    --grisfonce: #D9D9D9;
+}
+
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* ---------------Menu--------------- */
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+    padding-top: 30px;
+    margin: 0 20px;
+}
+
+.menu nav ul {
+    display: flex;
+}
+
+.menu nav ul li {
+    list-style: none;
+    padding: 5%;
+    width: 250px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.menu nav ul li:hover{
+    color: var(--bleu);
+    border-top: solid 4px var(--bleu);
+}
+
+h1 {
+    margin: 0 0 15px 20px;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* ---------------Search bar--------------- */
+
+.search-bar {
+    display: flex;
+    margin: 15px 20px 15px 20px;
+}
+
+.fa-magnifying-glass {
+    display: none;
+}
+
+.icon-sb {
+    background: var(--grisclair);
+    padding: 12px 16px;
+    border-radius: 12px 0 0 12px;
+}
+
+.search {
+    border: none;
+    outline: none;
+    padding: 12px;
+}
+
+.search::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+.btn-sb {
+    background-color: var(--bleu);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 0 12px 12px 0;
+}
+
+/* ---------------Filters--------------- */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 15px;
+}
+
+.filter, .filterf {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    list-style: none;
+    font-weight: bold;
+
+}
+
+.filter {
+    border: 1px solid var(--grisfonce);
+    border-radius: 20px;
+}
+
+.filter a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+.filter:hover {
+    background-color: var(--ciel);
+} 
+
+.filter i {
+    color: var(--bleu);
+}
+
+.i {
+    color: var(--bleu);
+    border: solid 1px var(--grisfonce);
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin: 30px 20px;
+    font-size: 12px;
+}
+
+.info-txt{
+    display: flex;
+    align-items: center;
+}
+
+.info-txt p {
+    font-size: 16px;
+}
+
+/* ---------------Sections--------------- */
+
+.container-first{
+    width: 100%;
+    display: flex;
+    gap: 2%;
+}
+
+/* ------------Hebergement------------ */
+
+#hebergement{
+    width:66%;
+    background-color: var(--grisclair);
+    display: flex;
+    flex-direction: column;
+    border-radius: 17px;
+}
+
+.container-heberg{
+    width : 100%;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    gap: 2% ;
+}
+
+.vignette-heberg {
+    width: 27%;
+    background-color: white;
+    margin-bottom: 2%;
+    border: solid 4px white;
+    border-radius: 17px;
+    object-fit: cover;
+    flex: inherit;
+    box-shadow: 1px 1px 6px grey;
+}
+
+.vignette-heberg img {
+   width: 100%;
+   height: 110px;
+   object-fit: cover;
+   border-radius: 17px 17px 0 0 ;
+    
+}
+
+.leg-heberg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    background-color: white;
+    border-radius: 0px 0px 17px 17px;
+    padding :3%;
+}
+.lieu{
+    font-weight: bold;
+}
+
+.tarif{
+    font-weight: lighter;
+}
+
+/*étoiles*/
+i{
+    color: var(--bleu);
+}
+.light{
+    color: var(--ciel);
+}
+
+/* afficher plus */
+.plus{
+    padding: 2%;
+    font-weight: bold;
+
+}
+
+/*--------------- populaire ------------*/
+
+#populaire{
+    width: 33%;
+    background-color: var(--grisclair); 
+    border-radius: 17px;
+    padding: 1%;
+}
+
+.titre{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.fa-chart-line{
+    padding: 2%;
+}
+.container-pop{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ 
+    padding: 2%;
+    gap: 2%;
+}
+
+.vignette-pop{
+   background-color: white; 
+   width: 100%;
+   height: 140px;
+   display: flex;
+   flex-direction:row;
+   flex-wrap: nowrap;
+   border-radius: 17px;
+   margin-bottom: 4%;
+   box-shadow: 1px 1px 6px grey; 
+   border: solid 4px white;
+}
+
+.vignette-pop img {
+   width:110px;
+   object-fit: cover;
+   border-radius: 17px 0 0 17px ;
+ }
+
+/*------------------legende pop------------------ */
+
+.leg-pop{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    background-color: white;
+    border-radius: 0px 17px 17px 0px;
+    padding :3%;
+    min-width: 130px;
+}
+
+.leg-pop{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*------------------Activités------------------ */
+
+.container-act{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: auto;
+    padding-top: 2%;
+}
+
+.vignette-act{
+    width: 23%;
+}
+
+.container-act img{
+    width: 100%;
+    height: 376px;
+    object-fit: cover;
+    border-radius: 17px 17px 0px 0px;
+}
+
+/*------------------legende activités------------------ */
+
+.leg-act{
+    min-height: 55px;
+    display: flex;
+    padding:5px;
+    border-radius: 0px 0px 17px 17px;
+    box-shadow: 0px 0px 6px grey; 
+}
+
+.leg-act p{
+    display: flex;
+    align-items: center;
+}
+
+/* ------------------footer------------------ */ 
+footer{
+    background: var(--grisclair);
+    display: flex;
+    width:100%;
+    min-height:200px;
+    justify-content: space-between;
+    padding : 4%;
+    margin-top: 4%;
+}
+.foot-nav{
+    display: flex; 
+    flex-direction: column;
+    width: 33.33%;
+}
+
+.foot-nav > ul {
+    list-style: none;  
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    line-height: 2em;
+}
+
+/* -------------------fin footer------------------ */ 
+
+
+
+/* ----------------- @   @   @   @   @   @ ----------------- */
+
+/* --------------------------- 992px -------------------------- */
+
+@media screen and (max-width:992px) {
+
+    #hebergement, #populaire {
+        width: 100%;
+    }
+    .container-first{
+        flex-direction: column;
+    }
+    .container-pop{
+       flex-direction: row;
+      
+    }
+    .container-act img{
+        height: 204px;
+    }
+}
+
+/* --------------------------- 768px -------------------------- */
+
+@media screen and (max-width:768px) {
+
+    h1 {
+        font-size: 0.9em;
+    }
+    h2 {
+        font-size: 0.8em;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .menu nav ul li {
+        width: 50%;
+        border-bottom: solid 4px #D9D9D9;
+    }
+    
+    .menu nav ul li:hover{
+        color: var(--bleu);
+        border-bottom: solid 4px var(--bleu);
+        border-top: 0;
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-sb span {
+        display: none;
+    }
+
+    .fa-magnifying-glass {
+        display: flex;
+        color: white;
+    }
+
+    .filter a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8em;
+        width: 130px;
+    }
+
+    .filter i {
+        margin-right: 5px;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 40%;
+        max-height: 47px;
+        margin: 5px;
+    }
+
+    .filterf {
+        width: 100%;
+    }
+
+    .container-first{
+        flex-direction: column-reverse;
+    }
+    #activites{
+        padding: 2%;
+        
+    }
+    #hebergement{
+        background-color: white;
+    }
+    #populaire{
+        background-color: var(--grisclair);
+        border-radius: 0;
+    }
+    .container-pop, .container-heberg, .container-act {
+        flex-direction:column;
+    }
+    .vignette-heberg, .vignette-act{
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    footer{
+        background: var(--grisclair);
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+
+    .foot-nav{
+        width: 100%;
+    }
+
+    .foot-nav h4{
+        margin-top: 3%;
+    }
+
+}
+
